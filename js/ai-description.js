@@ -173,7 +173,7 @@ async function streamReader(response, signal) {
 
 // Посимвольный вывод с задержкой — эффект «печатающей нейронки»
 async function typewriterReveal(fullText, myReq) {
-    const CHAR_DELAY = 20; // мс на символ
+    const CHAR_DELAY = 15; // мс на символ
 
     for (let i = 1; i <= fullText.length; i++) {
         if (myReq !== requestId) return; // отмена при смене картинки
