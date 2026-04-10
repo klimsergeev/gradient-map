@@ -37,8 +37,24 @@ export const STORAGE_KEYS = {
     aiUpload:            'gradient-map:ai:upload',
 };
 
+// API-ключ: передаётся через URL-параметр ?key=sk-or-v1-...
+// При первом переходе сохраняется в localStorage, дальше работает без параметра.
+function resolveApiKey() {
+    const LS_KEY = 'gradient-map:or-key';
+    const param = new URLSearchParams(window.location.search).get('key');
+    if (param) {
+        try { localStorage.setItem(LS_KEY, param); } catch { /* quota */ }
+        // Убираем ключ из адресной строки, чтобы не светился в истории
+        const url = new URL(window.location);
+        url.searchParams.delete('key');
+        window.history.replaceState({}, '', url);
+        return param;
+    }
+    try { return localStorage.getItem(LS_KEY) || ''; } catch { return ''; }
+}
+
 export const AI_CONFIG = {
-    apiKey: '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',
+    apiKey: resolveApiKey(),
     model: 'google/gemini-2.5-flash-lite',
     endpoint: 'https://openrouter.ai/api/v1/chat/completions',
     timeout: 30000,

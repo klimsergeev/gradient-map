@@ -13,6 +13,10 @@ let requestId = 0;
 // ---------- public ----------
 
 export function initAiDescription() {
+    if (!AI_CONFIG.apiKey) {
+        console.info('[ai-description] No API key — AI generation disabled. Pass ?key=sk-or-v1-... in URL.');
+        return;
+    }
     h1El = document.querySelector('.banner__h1');
     subtitleEl = document.querySelector('.banner__subtitle');
     if (!h1El || !subtitleEl) return;
