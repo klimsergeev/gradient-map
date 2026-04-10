@@ -1,0 +1,25 @@
+.footer {
+    width: var(--page-width);
+    height: calc(var(--footer-h) + 64px); /* 145 + 64 padding-bottom */
+    padding-top: 80px;
+    padding-bottom: 64px;
+    box-sizing: border-box;
+}
+.footer__inner {
+    width: var(--container-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.footer__heading {
+    font: 500 24px/27px var(--font-statika);
+    letter-spacing: -0.5px;
+    color: var(--color-text-primary);
+    margin: 0;
+}
+.footer__text {
+    font: 400 20px/30px var(--font-statika);
+    color: var(--color-text-primary);
+    margin: 0;
+}

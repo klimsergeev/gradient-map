@@ -1,0 +1,30 @@
+.harmony-info {
+    width: var(--page-width);
+    padding-top: 64px;
+    box-sizing: border-box;
+}
+.harmony-info__inner {
+    width: var(--container-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.harmony-info__heading {
+    font: 400 40px/45px var(--font-tercia);
+    color: var(--color-text-primary);
+    margin: 0;
+}
+.harmony-info__text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.harmony-info__text p {
+    font: 400 20px/30px var(--font-statika);
+    color: var(--color-text-primary);
+    margin: 0;
+}
+.harmony-info__text strong {
+    font-weight: var(--fw-medium);
+}

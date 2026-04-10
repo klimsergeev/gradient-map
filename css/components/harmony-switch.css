@@ -1,0 +1,77 @@
+/* Segmented switch для выбора гармонии градиентов */
+
+.harmony-switch {
+    width: var(--page-width);
+    background: var(--color-bg-primary);
+    padding-top: 64px;
+    box-sizing: border-box;
+}
+
+.harmony-switch__inner {
+    width: var(--container-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.harmony-switch__heading {
+    font: var(--fw-regular) 40px/45px var(--font-tercia);
+    color: var(--color-text-primary);
+    margin: 0;
+}
+
+.harmony-switch__list--hidden {
+    display: none;
+}
+
+/* Скрываем Mix/Zones переключатель — вернуть позже */
+.harmony-switch__list--distribution {
+    display: none !important;
+}
+
+.harmony-switch__list {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    padding-top: 16px;
+    margin: 0;
+    border: none;
+    width: fit-content;
+    background: transparent;
+}
+
+.harmony-switch__list > li {
+    display: block;
+}
+
+.harmony-switch__item {
+    height: 44px;
+    padding: 0 20px;
+    font: var(--fw-medium) 16px/24px var(--font-statika);
+    color: var(--color-text-primary);
+    background: #ffffff;
+    border: none;
+    border-radius: 22px;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.harmony-switch__item:hover:not(.harmony-switch__item--active) {
+    background: #ebe9e7;
+}
+
+.harmony-switch__item--active {
+    background: #f5f4f2;
+    color: var(--color-text-primary);
+}
+
+.harmony-switch__item:focus {
+    outline: none;
+}
+
+.harmony-switch__item:focus-visible {
+    outline: 3px solid var(--color-controls-primary);
+    outline-offset: 2px;
+}

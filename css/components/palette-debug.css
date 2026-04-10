@@ -1,0 +1,37 @@
+.palette-debug {
+    width: var(--page-width);
+    padding-top: 64px;
+    box-sizing: border-box;
+}
+
+.palette-debug__inner {
+    width: var(--container-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.palette-debug__heading {
+    font: 400 40px/45px var(--font-tercia);
+    color: var(--color-text-primary);
+    margin: 0;
+}
+
+.palette-debug__swatches {
+    display: flex;
+    gap: 24px;
+    width: 576px;
+    height: 96px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.palette-debug__swatch {
+    width: 96px;
+    height: 96px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+}

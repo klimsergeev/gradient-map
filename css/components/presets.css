@@ -1,0 +1,100 @@
+/* Shelf 330 — карусель пресетов (статика) */
+
+.presets {
+    width: var(--page-width);
+    height: var(--shelf-presets-h);
+    background: var(--color-bg-primary);
+    padding-top: 64px;
+    box-sizing: border-box;
+}
+
+.presets__inner {
+    width: var(--container-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.presets__title {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.presets__heading {
+    font: var(--fw-regular) 40px/45px var(--font-tercia);
+    color: var(--color-text-primary);
+    margin: 0;
+}
+
+.presets__subheading {
+    font: var(--fw-regular) 20px/30px var(--font-statika);
+    color: var(--color-text-primary);
+    margin: 0;
+}
+
+.presets__gallery {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+    width: var(--container-width);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.preset {
+    width: 226px;
+    height: 151px;
+    flex-shrink: 0;
+}
+
+.preset__button {
+    display: block;
+    width: 226px;
+    height: 151px;
+    padding: 0;
+    background: none;
+    box-sizing: border-box;
+    border: 8px solid transparent;
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.preset__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hover только на невыбранных */
+.preset:not(.is-selected) .preset__button:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-middle);
+}
+
+/* Selected — меняем только цвет рамки, не толщину */
+.preset.is-selected .preset__button {
+    border-color: var(--color-badge-amethyst);
+    cursor: default;
+}
+
+.preset.is-selected .preset__button:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* a11y: видимый focus-visible */
+.preset__button:focus {
+    outline: none;
+}
+
+.preset__button:focus-visible {
+    outline: 3px solid var(--color-controls-primary);
+    outline-offset: 2px;
+}

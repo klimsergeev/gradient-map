@@ -1,0 +1,39 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 26px;
+    font-family: var(--font-statika);
+    font-weight: var(--fw-medium);
+    cursor: pointer;
+    transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.btn:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+.btn--cta {
+    min-width: 256px;
+    width: 256px;
+    height: 52px;
+    padding: 0 32px;
+    background: #ff5005;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.btn--icon {
+    width: 52px;
+    height: 52px;
+    background: rgba(253, 250, 245, 0.2);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.btn--icon img {
+    width: 32px;
+    height: 32px;
+}

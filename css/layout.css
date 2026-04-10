@@ -1,0 +1,4 @@
+.banner       { width: var(--page-width); height: var(--banner-h); position: relative; }
+.presets      { width: var(--page-width); height: var(--shelf-presets-h); background: #fff; }
+.shelf-info   { width: var(--page-width); height: var(--shelf-info-h); background: #fff; }
+.footer       { width: var(--page-width); height: var(--footer-h); background: #fff; }

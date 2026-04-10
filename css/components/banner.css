@@ -1,0 +1,217 @@
+.banner {
+    position: relative;
+    width: var(--page-width);
+    height: var(--banner-h);
+    overflow: hidden;
+    background: linear-gradient(
+        153.8deg,
+        #650f2a 25.31%,
+        #da4126 90.17%
+    );
+}
+
+.banner__image-frame {
+    position: absolute;
+    left: 894px;
+    top: 0;
+    width: 1026px;
+    height: 684px;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 0;
+    transition: border-radius 150ms ease;
+}
+
+
+.banner__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: center;
+    transition: filter 150ms ease;
+}
+
+/* Hover по фрейму: показываем оверлей. */
+.banner:not(.banner--suppress-hover) .banner__image-frame:hover .banner__overlay {
+    display: flex;
+}
+.banner:not(.banner--suppress-hover) .banner__image-frame:hover .banner__image {
+    filter: blur(10px);
+}
+
+/* Drag-состояния (управляются через JS на .banner). */
+.banner--state-drag .banner__image,
+.banner--state-drag-hover .banner__image {
+    filter: blur(10px);
+}
+.banner--state-drag .banner__image-frame,
+.banner--state-drag-hover .banner__image-frame {
+    border-radius: 32px;
+}
+.banner--state-drag .banner__overlay,
+.banner--state-drag-hover .banner__overlay {
+    display: flex;
+}
+
+/* Оверлей внутри фрейма. */
+.banner__overlay {
+    position: absolute;
+    inset: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 8px;
+    background: rgba(245, 228, 255, 0.5);
+    border: 2px dashed #dec5ed;
+    border-radius: 32px;
+    box-sizing: border-box;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.banner--state-drag-hover .banner__overlay {
+    border-color: #ff5005;
+}
+
+.banner__overlay-icon {
+    width: 44px;
+    height: 44px;
+    color: #231d1f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner__overlay-icon img {
+    width: 44px;
+    height: 44px;
+    display: block;
+}
+
+.banner__overlay-title {
+    font-family: 'Roboto Slab', var(--font-statika), serif;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #231d1f;
+    text-align: center;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.banner__overlay-hint {
+    font-family: 'Roboto', var(--font-statika), sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #706e6f;
+    text-align: center;
+    white-space: nowrap;
+    margin: 0;
+}
+
+/* Page-level dropzone overlay: затемняет страницу при drag. */
+.page-dropzone {
+    position: fixed;
+    inset: 0;
+    background: transparent;
+    pointer-events: none;
+    transition: background 150ms ease;
+    z-index: 100;
+}
+.page-dropzone--active {
+    background: rgba(15, 15, 15, 0.3);
+}
+
+/* Чтобы фрейм с dashed-border был виден над затемнением, поднимаем баннер. */
+.banner--state-drag,
+.banner--state-drag-hover {
+    position: relative;
+    z-index: 101;
+}
+
+.banner__fade-r {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 399px;
+    height: 684px;
+    pointer-events: none;
+    background: linear-gradient(
+        to right,
+        #8a1f29 0%,
+        rgba(138, 31, 41, 0) 100%
+    );
+}
+
+.banner__stripes {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1099px;
+    height: 684px;
+    pointer-events: none;
+}
+
+.banner__title {
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    width: 1536px;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    color: #ffffff;
+}
+
+.banner__text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+}
+
+.banner__h1 {
+    font-family: var(--font-tercia);
+    font-size: 56px;
+    line-height: 63px;
+    font-weight: var(--fw-regular);
+    color: inherit;
+}
+
+.banner__subtitle {
+    font-family: var(--font-statika);
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: var(--fw-regular);
+    color: inherit;
+}
+
+.banner__meta {
+    display: flex;
+    gap: 6px;
+    font-family: var(--font-statika);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: var(--fw-regular);
+    white-space: nowrap;
+    color: inherit;
+}
+
+.banner__meta-link {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+.banner__buttons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}

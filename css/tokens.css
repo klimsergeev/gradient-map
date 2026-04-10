@@ -1,0 +1,30 @@
+:root {
+  /* fonts */
+  --font-tercia: 'Tercia', serif;
+  --font-statika: 'Statika', system-ui, sans-serif;
+
+  /* weights */
+  --fw-regular: 400;
+  --fw-medium: 500;
+
+  /* colors */
+  --color-text-primary: #231d1f;
+  --color-text-inverted: #ffffff;
+  --color-bg-primary: #ffffff;
+  --color-badge-amethyst: #dec5ed;
+  --color-controls-primary: #ff5005;
+
+  /* radii */
+  --radius-card: 16px;
+
+  /* shadows — Granit DS */
+  --shadow-middle: 0 8px 20px rgba(125, 10, 95, 0.06), 0 4px 24px rgba(125, 10, 95, 0.04);
+
+  /* layout */
+  --page-width: 1920px;
+  --container-width: 1536px;
+  --banner-h: 684px;
+  --shelf-presets-h: 330px;
+  --shelf-info-h: 207px;
+  --footer-h: 145px;
+}

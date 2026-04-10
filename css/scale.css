@@ -1,0 +1,29 @@
+/* Скейлинг страницы под ширину viewport.
+   Применяется к обёртке .page-scaler, не к body, чтобы fixed-элементы
+   (#toast-stack, #page-dropzone) оставались в viewport-системе координат.
+
+   Внутренняя ширина = 1920px. На экранах <1920 уменьшаем пропорционально,
+   на экранах >=1920 оставляем scale=1. */
+:root {
+    --page-scale: 1;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+.page-scaler {
+    width: var(--page-width);
+    transform: scale(var(--page-scale));
+    transform-origin: top left;
+    will-change: transform;
+    margin-left: max(0px, calc((100vw - var(--page-width)) / 2));
+}
+
+/* Поднимаем скейлер над #page-dropzone во время drag.
+   Нужно потому, что transform создаёт новый stacking context —
+   z-index баннера внутри скейлера не виден снаружи. */
+.page-scaler--lifted {
+    position: relative;
+    z-index: 200;
+}

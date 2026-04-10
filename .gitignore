@@ -1,0 +1,19 @@
+# Backups
+.backup-*
+
+# Dependencies
+node_modules/
+
+# System
+.DS_Store
+
+# Logs
+*.log
+
+# Claude Code
+.claude/
+
+# Project service dirs
+/description/
+/library/
+/tasks/

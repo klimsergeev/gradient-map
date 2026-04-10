@@ -1,0 +1,26 @@
+.shelf-info {
+    width: var(--page-width);
+    height: var(--shelf-info-h);
+    padding-top: 64px;
+    box-sizing: border-box;
+}
+.shelf-info__inner {
+    width: var(--container-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.shelf-info__heading {
+    font: 400 40px/45px var(--font-tercia);
+    color: var(--color-text-primary);
+    margin: 0;
+}
+.shelf-info__list {
+    font: 400 20px/30px var(--font-statika);
+    color: var(--color-text-primary);
+    padding-left: 30px;
+    margin: 0;
+    /* reset.css обнуляет list-style — возвращаем нумерацию */
+    list-style: decimal outside;
+}

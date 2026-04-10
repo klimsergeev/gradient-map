@@ -1,0 +1,12 @@
+.banner__stripes .stripe {
+    position: absolute;
+    top: 0;
+    height: 684px;
+    pointer-events: none;
+}
+
+.banner__stripes .stripe svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}

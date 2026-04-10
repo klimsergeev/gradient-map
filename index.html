@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Спектакль «Актриса»</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/scale.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components/banner.css">
+  <link rel="stylesheet" href="css/components/buttons.css">
+  <link rel="stylesheet" href="css/components/stripes.css">
+  <link rel="stylesheet" href="css/components/harmony-switch.css">
+  <link rel="stylesheet" href="css/components/presets.css">
+  <link rel="stylesheet" href="css/components/palette-debug.css">
+  <link rel="stylesheet" href="css/components/harmony-info.css">
+  <link rel="stylesheet" href="css/components/shelf-info.css">
+  <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/components/toast.css">
+</head>
+<body class="ai-page">
+  <div class="page-scaler" id="page-scaler">
+  <main class="ai-page__main">
+    <section class="banner" id="banner" aria-label="Спектакль «Актриса»">
+        <div class="banner__image-frame">
+            <img
+                class="banner__image"
+                src="assets/images/originals/1-aronova.jpg"
+                alt="Сцена из спектакля «Актриса»"
+                width="1026"
+                height="684"
+                decoding="async"
+            >
+            <div class="banner__fade-r" aria-hidden="true"></div>
+            <div class="banner__overlay" aria-hidden="true">
+                <div class="banner__overlay-icon">
+                    <img src="assets/svg/icons/upload.svg" alt="" width="44" height="44">
+                </div>
+                <p class="banner__overlay-title">Кликните, чтобы загрузить вашу картинку или перетащите ее сюда</p>
+                <p class="banner__overlay-hint">WEBP, PNG или JPEG до 5 МБ</p>
+            </div>
+        </div>
+
+        <div class="banner__stripes" id="banner-stripes" aria-hidden="true"></div>
+
+        <div class="banner__title">
+            <div class="banner__text">
+                <h1 class="banner__h1">Иммерсивное шоу «Монохром»</h1>
+                <p class="banner__subtitle">
+                    Эти градиенты перекрашиваются по основным цветам изображения<br>
+                    на основе одной из популярных цветовых гармоний.<br>
+                    Можно загрузить свою картинку, просто перетащите её на Марию →
+                </p>
+                <p class="banner__meta">
+                    <span class="banner__meta-item">Апрель 2026</span>
+                    <span class="banner__meta-dot" aria-hidden="true">•</span>
+                    <a class="banner__meta-item" href="#">Сергей Клименко и Claude Code</a>
+                    <span class="banner__meta-dot" aria-hidden="true">•</span>
+                    <span class="banner__meta-item">18+</span>
+                </p>
+            </div>
+
+            <div class="banner__buttons">
+                <button type="button" class="btn btn--cta">Билеты от 9 900 ₽</button>
+                <button type="button" class="btn btn--icon" aria-label="В избранное" aria-pressed="false">
+                    <img src="assets/svg/icons/heart.svg" alt="" width="32" height="32">
+                </button>
+                <button type="button" class="btn btn--icon" aria-label="Поделиться">
+                    <img src="assets/svg/icons/share.svg" alt="" width="32" height="32">
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="harmony-switch" aria-label="Цветовые гармонии">
+      <div class="harmony-switch__inner">
+        <h2 class="harmony-switch__heading">Выберите цветовую гармонию</h2>
+        <ul class="harmony-switch__list" role="tablist">
+          <li><button type="button" class="harmony-switch__item harmony-switch__item--active" data-mode="brand" aria-pressed="true">Оригинал</button></li>
+          <li><button type="button" class="harmony-switch__item" data-mode="analogous" aria-pressed="false">Аналоговая</button></li>
+          <li><button type="button" class="harmony-switch__item" data-mode="triadic" aria-pressed="false">Триада</button></li>
+          <li><button type="button" class="harmony-switch__item" data-mode="complementary" aria-pressed="false">Комплиментарная</button></li>
+          <li><button type="button" class="harmony-switch__item" data-mode="monochromatic" aria-pressed="false">Монохромная</button></li>
+          <li><button type="button" class="harmony-switch__item" data-mode="tetradic" aria-pressed="false">Квадратичная</button></li>
+          <li><button type="button" class="harmony-switch__item" data-mode="splitComplementary" aria-pressed="false">Разд. комплиментарная</button></li>
+        </ul>
+        <ul class="harmony-switch__list harmony-switch__list--distribution" role="tablist" data-role="distribution">
+          <li><button type="button" class="harmony-switch__item harmony-switch__item--active" data-distribution="mix" aria-pressed="true">Mix</button></li>
+          <li><button type="button" class="harmony-switch__item" data-distribution="zones" aria-pressed="false">Zones</button></li>
+        </ul>
+      </div>
+    </section>
+    <section class="presets" aria-label="Выбор обложки">
+      <div class="presets__inner">
+        <div class="presets__title">
+          <h2 class="presets__heading">Обложки разной степени убитости</h2>
+          <p class="presets__subheading">Кликните по пресету или перетащите свою картинку на баннер</p>
+        </div>
+        <ul class="presets__gallery" id="presets-gallery">
+          <li class="preset is-selected" data-id="1-aronova">
+            <button type="button" class="preset__button" aria-pressed="true" aria-label="Выбрать обложку: Ароновa">
+              <img class="preset__image" src="assets/images/previews/1-aronova.jpg" alt="" width="226" height="151" decoding="async">
+            </button>
+          </li>
+          <li class="preset" data-id="2-bw">
+            <button type="button" class="preset__button" aria-pressed="false" aria-label="Выбрать обложку: чёрно-белая">
+              <img class="preset__image" src="assets/images/previews/2-bw.jpg" alt="" width="226" height="151" decoding="async">
+            </button>
+          </li>
+          <li class="preset" data-id="3-sobaka">
+            <button type="button" class="preset__button" aria-pressed="false" aria-label="Выбрать обложку: с собакой">
+              <img class="preset__image" src="assets/images/previews/3-sobaka.jpg" alt="" width="226" height="151" decoding="async">
+            </button>
+          </li>
+          <li class="preset" data-id="4-hudson">
+            <button type="button" class="preset__button" aria-pressed="false" aria-label="Выбрать обложку: Хадсон">
+              <img class="preset__image" src="assets/images/previews/4-hudson.jpg" alt="" width="226" height="151" decoding="async">
+            </button>
+          </li>
+          <li class="preset" data-id="5-collage">
+            <button type="button" class="preset__button" aria-pressed="false" aria-label="Выбрать обложку: коллаж">
+              <img class="preset__image" src="assets/images/previews/5-collage.jpg" alt="" width="226" height="151" decoding="async">
+            </button>
+          </li>
+          <li class="preset" data-id="6-berezka">
+            <button type="button" class="preset__button" aria-pressed="false" aria-label="Выбрать обложку: берёзка">
+              <img class="preset__image" src="assets/images/previews/6-berezka.jpg" alt="" width="226" height="151" decoding="async">
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="harmony-info">
+      <div class="harmony-info__inner">
+        <h2 class="harmony-info__heading">Как работают цветовые гармонии</h2>
+        <div class="harmony-info__text">
+          <p><strong>Оригинал</strong> — исходный рыже-коричневый градиент полосок, без перекраски. Режим по умолчанию.</p>
+          <p><strong>Аналоговая</strong> — для каждой полоски её базовый цвет сдвигается на ±25° по кругу hue, давая три родственных оттенка. Мягко, не контрастно, сохраняет общее настроение картинки.</p>
+          <p><strong>Триада</strong> — классическая триада 120°: базовый цвет плюс два спутника, разнесённых на 120° по кругу. Максимальный контраст.</p>
+          <p><strong>Комплиментарная</strong> — база + противоположный цвет через 180° по кругу hue. Максимальный двуцветный контраст.</p>
+          <p><strong>Монохромная</strong> — один hue, варьируется только светлота и слегка насыщенность. Тёмные стопы менее насыщенные — как тени в реальности. Самая сдержанная гармония.</p>
+          <p><strong>Квадратичная</strong> — 4 цвета через 90° (квадрат на цветовом круге). Для каждой полоски берутся 3 подряд вершины квадрата.</p>
+          <p><strong>Разделённая комплиментарная</strong> — вместо точного комплемента берутся два соседних к нему цвета (±30° от 180°). Мягче, чем чистый комплемент, но с сохранением контрастности.</p>
+        </div>
+      </div>
+    </section>
+    <section class="palette-debug" aria-label="Основные цвета изображения" style="display:none">
+      <div class="palette-debug__inner">
+        <h2 class="palette-debug__heading">Основные цвета изображения</h2>
+        <ul class="palette-debug__swatches">
+          <li class="palette-debug__swatch"></li>
+          <li class="palette-debug__swatch"></li>
+          <li class="palette-debug__swatch"></li>
+          <li class="palette-debug__swatch"></li>
+          <li class="palette-debug__swatch"></li>
+        </ul>
+      </div>
+    </section>
+    <section class="shelf-info" style="display:none">
+      <div class="shelf-info__inner">
+        <h2 class="shelf-info__heading">Правило подбора цветов для каждой основы</h2>
+        <ol class="shelf-info__list">
+          <li>Аналоговое (основа + 2 родственных цвета)</li>
+          <li>Триадное (основа + 2 равноудаленных цвета)</li>
+          <li>Комплиментарное (*)</li>
+        </ol>
+      </div>
+    </section>
+    <footer class="footer" style="display:none">
+      <div class="footer__inner">
+        <h3 class="footer__heading">Footer</h3>
+        <p class="footer__text">Description</p>
+      </div>
+    </footer>
+  </main>
+  </div>
+  <div class="page-dropzone" id="page-dropzone" aria-hidden="true"></div>
+  <div class="toast-stack" id="toast-stack" aria-live="polite"></div>
+  <input type="file" id="file-input" accept="image/jpeg,image/png,image/webp" hidden>
+  <script src="https://unpkg.com/colorthief@3.3.1/dist/umd/color-thief.global.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,2 @@
+html { font-family: var(--font-statika); color: var(--color-text-primary); background: var(--color-bg-primary); }
+body { width: var(--page-width); margin: 0 auto; }
