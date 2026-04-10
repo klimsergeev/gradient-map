@@ -33,6 +33,16 @@ export const STORAGE_KEYS = {
     lastUpload:          'gradient-map:last-upload',
     palettePresetPrefix: 'gradient-map:palette:preset:',
     paletteUpload:       'gradient-map:palette:upload',
+    aiPresetPrefix:      'gradient-map:ai:preset:',
+    aiUpload:            'gradient-map:ai:upload',
+};
+
+export const AI_CONFIG = {
+    apiKey: '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',
+    model: 'google/gemini-2.5-flash-lite',
+    endpoint: 'https://openrouter.ai/api/v1/chat/completions',
+    timeout: 30000,
+    maxImageSide: 512,
 };
 
 export const LIMITS = {

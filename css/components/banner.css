@@ -215,3 +215,16 @@
     align-items: center;
     gap: 16px;
 }
+
+/* --- AI skeleton --- */
+@keyframes skeleton-pulse {
+    0%, 100% { opacity: 0.4; }
+    50%      { opacity: 1; }
+}
+
+.banner__h1--skeleton,
+.banner__subtitle--skeleton {
+    animation: skeleton-pulse 1.5s ease-in-out infinite;
+    pointer-events: none;
+}
+}

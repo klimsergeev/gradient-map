@@ -53,5 +53,7 @@ export function clearAll() {
     removeLS(STORAGE_KEYS.paletteUpload);
     for (const p of PRESETS) {
         removeLS(STORAGE_KEYS.palettePresetPrefix + p.id);
+        removeLS(STORAGE_KEYS.aiPresetPrefix + p.id);
     }
+    removeLS(STORAGE_KEYS.aiUpload);
 }

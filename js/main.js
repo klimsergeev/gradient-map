@@ -7,6 +7,7 @@ import { DEFAULT_PRESET_ID } from './config.js';
 import { initScale } from './scale.js';
 import { initPalette } from './palette.js';
 import { initRecolor } from './recolor.js';
+import { initAiDescription } from './ai-description.js';
 
 function restoreState() {
     selectPreset(DEFAULT_PRESET_ID);
@@ -27,6 +28,7 @@ async function init() {
     initBanner();
     initPalette();
     initRecolor();
+    initAiDescription();
     initPresets();
     initDropzone();
     restoreState();
