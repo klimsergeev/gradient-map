@@ -173,7 +173,7 @@ async function streamReader(response, signal) {
 
 // Вывод случайными порциями — имитация реального streaming
 async function typewriterReveal(fullText, myReq) {
-    const TICK = 25;      // мс между порциями
+    const TICK = 55;      // мс между порциями
     const MAX_CHARS = 8;  // макс символов за тик (0–8)
     let pos = 0;
 
