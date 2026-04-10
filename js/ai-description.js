@@ -171,14 +171,18 @@ async function streamReader(response, signal) {
     return fullText;
 }
 
-// Посимвольный вывод с задержкой — эффект «печатающей нейронки»
+// Вывод случайными порциями — имитация реального streaming
 async function typewriterReveal(fullText, myReq) {
-    const CHAR_DELAY = 15; // мс на символ
+    const TICK = 25;      // мс между порциями
+    const MAX_CHARS = 8;  // макс символов за тик (0–8)
+    let pos = 0;
 
-    for (let i = 1; i <= fullText.length; i++) {
-        if (myReq !== requestId) return; // отмена при смене картинки
-        updateFromStream(fullText.slice(0, i));
-        await new Promise(r => setTimeout(r, CHAR_DELAY));
+    while (pos < fullText.length) {
+        if (myReq !== requestId) return;
+        const chunk = Math.floor(Math.random() * (MAX_CHARS + 1)); // 0–8
+        pos = Math.min(pos + Math.max(chunk, 1), fullText.length); // минимум 1, чтобы не зависнуть
+        updateFromStream(fullText.slice(0, pos));
+        await new Promise(r => setTimeout(r, TICK));
     }
 }
 
