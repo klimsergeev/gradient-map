@@ -208,9 +208,9 @@ function parseAiResponse(text) {
         else if (inDescription) { descParts.push(line); }
     }
 
-    const description = descParts.join(' ').slice(0, 256);
+    const description = descParts.join(' ');
     if (!title && !description) return null;
-    return { genre: genre.slice(0, 30), title: title.slice(0, 60), description };
+    return { genre, title, description };
 }
 
 // ---------- image compression ----------
