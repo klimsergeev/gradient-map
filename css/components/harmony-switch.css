@@ -21,6 +21,29 @@
     margin: 0;
 }
 
+.harmony-switch__colors {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.harmony-switch__colors-label {
+    font: var(--fw-regular) 20px/30px var(--font-statika);
+    color: var(--color-text-primary);
+}
+
+.harmony-switch__swatches {
+    display: flex;
+    gap: 6px;
+}
+
+.harmony-switch__swatch {
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    background: #ccc;
+}
+
 .harmony-switch__list--hidden {
     display: none;
 }

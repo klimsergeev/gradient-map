@@ -12,7 +12,7 @@ export function getCurrentPalette() {
 
 export function initPalette() {
     imgEl = document.querySelector('.banner__image');
-    swatchEls = [...document.querySelectorAll('.palette-debug__swatch')];
+    swatchEls = [...document.querySelectorAll('.harmony-switch__swatch')];
     document.addEventListener('banner:image-changed', onImageChanged);
     // Первый preset мог отрендериться до initPalette — догоняем.
     if (imgEl?.src) {
