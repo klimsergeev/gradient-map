@@ -13,6 +13,9 @@ let requestId = 0;
 // ---------- public ----------
 
 export function initAiDescription() {
+    // TODO: re-enable AI generation
+    return;
+
     if (!AI_CONFIG.apiKey) {
         console.info('[ai-description] No API key — AI generation disabled. Pass ?key=sk-or-v1-... in URL.');
         return;

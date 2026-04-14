@@ -54,7 +54,7 @@ function resolveApiKey() {
 }
 
 export const AI_CONFIG = {
-    apiKey: resolveApiKey(),
+    apiKey: '', // API key disabled — pass ?key=... to enable
     model: 'google/gemini-2.5-flash-lite',
     endpoint: 'https://openrouter.ai/api/v1/chat/completions',
     timeout: 30000,
